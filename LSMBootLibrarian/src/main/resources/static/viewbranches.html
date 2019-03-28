@@ -1,0 +1,127 @@
+<!-- <head > -->
+<!-- 	<link href="../libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" > -->
+<!-- 	<link href="main.css" rel="stylesheet" > -->
+<!-- </head > -->
+<div ng-controller="librarianController">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+	</div>
+	<div class="container marketing">
+		<h1>List of branches in LMS</h1>
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Branch Name</th>
+					<th scope="col">Branch Address</th>
+					<th scope="col">Pick</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="branch in branches | orderBy: 'branchName' ">
+					<td>{{$index+1}}</td>
+					<td>{{branch.branchName}}</td>
+					<td>{{branch.branchAddress}}</td>
+					<td>
+						<button type="button" class="btn btn-danger btn-sm" ng-click="showBranch(branch.branchId)">choose</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+<!-- 	....................................................................................................... -->
+<!--   <div class="testbody"> -->
+<!-- 	<div class="row" > -->
+<!-- 		<div class="col-md-12" > -->
+<!-- 			<form class="form-inline well well-sm" > -->
+<!-- 				<span class="glyphicon glyphicon-search" ></span > -->
+
+<!-- 				<div class="form-group" > -->
+<!-- 						<input type="text" -->
+<!-- 						       class="form-control" -->
+<!-- 						       id="name" -->
+<!-- 						       ng-model="search" -->
+<!-- 						       placeholder="Search name..." -->
+<!-- 								/> -->
+<!-- 				</div > -->
+
+<!-- 				<span class="glyphicon glyphicon-sort-by-attributes" ></span > -->
+
+<!-- 				<div class="form-group" > -->
+<!-- 					<select class="form-control" -->
+<!-- 									ng-model="order"> -->
+<!-- 						<option value="branchName" >Name (ASC)</option > -->
+<!-- 						<option value="-branchName" >Name (DEC)</option > -->
+<!-- 						<option value="branchAddress" >Address (ASC)</option > -->
+<!-- 						<option value="-branchAddress" >Address (DEC)</option > -->
+<!-- 					</select > -->
+<!-- 				</div > -->
+
+<!-- 			</form > -->
+<!-- 		</div > -->
+<!-- 	</div > -->
+
+
+<!-- 	<div class="row" > -->
+<!-- 		<div class="col-md-8" > -->
+<!-- 			<h1>List of branches in LMS</h1> -->
+<!-- 			<table class="table table-bordered" > -->
+
+<!-- 				<tr > -->
+<!-- 					<th >#</th > -->
+<!-- 					<th >Name -->
+<!-- 						<span ng-click="order = 'branchName'" class="glyphicon glyphicon-menu-up"></span> -->
+<!-- 						<span ng-click="order = '-branchName'" class="glyphicon glyphicon-menu-down"></span> -->
+<!-- 					</th > -->
+<!-- 					<th >Address -->
+<!-- 						<span ng-click="order = 'branchAddress'" class="glyphicon glyphicon-menu-up"></span> -->
+<!-- 						<span ng-click="order = '-branchAddress'" class="glyphicon glyphicon-menu-down"></span> -->
+<!-- 					</th > -->
+<!-- 				</tr > -->
+
+<!-- 				<tr ng-repeat="branch in branches = (persons | filter:sensitiveSearch | orderBy:'branchName')" -->
+<!-- 				    ng-style="{ -->
+<!-- 							 'background-color': $index == selectedIndex ? 'lightgray' : '' -->
+<!-- 						}" -->
+<!-- 				    ng-click="selectBranch(branch, $index)" > -->
+<!-- 					<td scope="col">{{ $index }}</td > -->
+<!-- 					<td scope="col">{{ branch.branchName }}</td > -->
+<!-- 					<td scope="col">{{ branch.branchAddress }}</td > -->
+<!-- 				</tr > -->
+<!-- 				<tr ng-show="filteredBranches.length == 0"> -->
+<!-- 					<td colspan="4"> -->
+<!-- 						<div class="alert alert-info"> -->
+<!-- 							<p class="text-center">No results found for search term '{{ search }}'</p> -->
+<!-- 						</div> -->
+<!-- 					</td> -->
+<!-- 				</tr> -->
+
+
+<!-- 			</table > -->
+
+<!-- 		</div > -->
+<!-- 		<div class="col-md-4" > -->
+
+<!-- 			<div class="panel panel-default" > -->
+<!-- 				<div class="panel-heading" >Details</div > -->
+<!-- 				<div class="panel-body" > -->
+
+<!-- 					<dl > -->
+<!-- 						<dt >Name</dt > -->
+<!-- 						<dd >{{selectedBranch.branchName}}</dd > -->
+<!-- 						<dt >Address</dt > -->
+<!-- 						<dd >{{selectedBranch.branchAddress}}</dd > -->
+<!-- 						<dt >Book</dt > -->
+<!-- 						<dd ng-repeat="b in selectedBranch.books">{{b.title}}</dd> -->
+<!-- 						<dt >Copies</dt > -->
+<!-- 						<dd ng-repeat="c in selectedBranch.bookCopies">{{c.noOfCopies}}</dd> -->
+<!-- 					</dl > -->
+
+<!-- 				</div > -->
+<!-- 			</div > -->
+
+<!-- 		</div > -->
+<!-- 	</div > -->
+<!--   </div> -->
+</div>

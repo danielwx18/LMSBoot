@@ -1,0 +1,27 @@
+<div ng-controller="librarianController">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+	</div>
+	<div class="container marketing">
+		<h1>The information of your branch</h1>
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Branch Name</th>
+					<th scope="col">Branch Address</th>
+					<th scope="col">Branch Books</th>
+					<th scope="col">Book Copies</th>
+					<th scope="col">Update Branch</th>
+					<th scope="col">Update Copies</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{selectedBranch.branchName}}</td>
+					<td>{{selectedBranch.branchAddress}}</td>
+					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
