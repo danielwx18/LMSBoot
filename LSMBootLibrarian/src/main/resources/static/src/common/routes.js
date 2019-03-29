@@ -5,8 +5,6 @@ lmsApp.config(["$routeProvider", function($routeProvider){
 		templateUrl: "home.html"
 	}).when("/librarian", {
 		templateUrl: "librarian.html"
-	}).when("/crud", {
-		templateUrl: "crud.html"
 	}).when("/librarianservice", {
 		templateUrl: "librarianservice.html"
 	}).when("/viewbranches", {
