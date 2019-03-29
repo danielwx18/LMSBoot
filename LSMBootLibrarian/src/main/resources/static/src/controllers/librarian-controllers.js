@@ -16,7 +16,16 @@ lmsApp.controller("librarianController", function($scope, $http, $window,
 				$window.location.href = "#/showbranch";
 			})
 	}
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//--------------------------------------------------------------------------------------------------------
 //	$scope.search = "";
 //	$scope.selectedIndex = null;
 //	$scope.selectedBranch = null;

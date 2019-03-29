@@ -4,5 +4,5 @@ lmsApp.constant("lmsConstants",{
 	LIBRARIAN_SERVER_URL: "http://localhost:8080/lms",
 	GET_ALL_BRANCHES: "/librarian/readAllBranches",
 	GET_SINGLE_BRANCH: "/librarian/readAllBranchesByName?branchId=",
-	//SAVE_AUTHOR: "/admin/saveAuthor",
+
 })
