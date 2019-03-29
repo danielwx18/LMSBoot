@@ -16,3 +16,11 @@
     top: 50%;
     transform: translate(-50%,-50%);
 }
+
+.bottom{
+	text-align: center;
+}
+
+.mt-0 {
+  margin-bottom: ($spacer * .25) !important;
+}

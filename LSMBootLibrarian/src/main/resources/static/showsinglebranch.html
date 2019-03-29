@@ -1,9 +1,16 @@
+<head>
+<link href="../libs/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="main.css" rel="stylesheet">
+</head>
 <div ng-controller="librarianController">
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
 	</div>
 	<div class="container marketing">
-		<h1>The information of your branch</h1>
+		<h1>
+			<center>The information of your branch</center>
+		</h1>
 		<table class="table">
 			<thead class="thead-dark">
 				<tr>
@@ -11,17 +18,36 @@
 					<th scope="col">Branch Address</th>
 					<th scope="col">Branch Books</th>
 					<th scope="col">Book Copies</th>
-					<th scope="col">Update Branch</th>
-					<th scope="col">Update Copies</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td>{{selectedBranch.branchName}}</td>
 					<td>{{selectedBranch.branchAddress}}</td>
-					
+
 				</tr>
 			</tbody>
 		</table>
+	</div>
+
+	<div class="container marketing">
+		<h6>Update Options</h6>
+		<div class="btn-group btn-group-toggle" data-toggle="buttons">
+			<label class="btn btn-outline-primary active btn-sm"> <input
+				type="radio" name="options" id="option1" autocomplete="off" checked>
+				Branch
+			</label> <label class="btn btn-outline-success btn-sm"> <input
+				type="radio" name="options" id="option2" autocomplete="off">
+				Copies
+			</label>
+		</div>
+	</div>
+
+	<div class="container marketing">
+		<div class="fixed-bottom">
+			<center>
+				<button type="button" class="btn btn-danger">Go Back</button>
+			</center>
+		</div>
 	</div>
 </div>
