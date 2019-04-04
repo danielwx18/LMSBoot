@@ -18,13 +18,13 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="branch in branches | orderBy: 'branchName' ">
+				<tr ng-repeat="b in branches | orderBy: 'branchName' ">
 					<td>{{$index+1}}</td>
-					<td>{{branch.branchName}}</td>
-					<td>{{branch.branchAddress}}</td>
+					<td>{{b.branchName}}</td>
+					<td>{{b.branchAddress}}</td>
 					<td>
 						<button type="button" class="btn btn-outline-success btn-sm"
-							ng-click="showBranch(branch.branchId)">choose</button>
+							ng-click="showBranch(b.branchId)">choose</button>
 					</td>
 				</tr>
 			</tbody>

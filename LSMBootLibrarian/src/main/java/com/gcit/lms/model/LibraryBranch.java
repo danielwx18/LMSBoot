@@ -4,7 +4,7 @@ import java.util.*;
 
 public class LibraryBranch {
 
-	private int branchId;
+	private Integer branchId;
 	private String branchName;
 	private String branchAddress;
 	private List<Book> books;
@@ -12,13 +12,13 @@ public class LibraryBranch {
 	/**
 	 * @return the branchId
 	 */
-	public int getBranchId() {
+	public Integer getBranchId() {
 		return branchId;
 	}
 	/**
 	 * @param branchId the branchId to set
 	 */
-	public void setBranchId(int branchId) {
+	public void setBranchId(Integer branchId) {
 		this.branchId = branchId;
 	}
 	/**

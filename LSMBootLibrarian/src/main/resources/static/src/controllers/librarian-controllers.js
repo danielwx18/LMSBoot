@@ -9,11 +9,11 @@ lmsApp.controller("librarianController", function($scope, $http, $window,
 			})
 	}
 	
-	var id = pageDataPass.get();
+	//var id = pageDataPass.get();
 			
-	$scope.showBranch = function(id) {
+	$scope.showBranch = function(branchId) {
 		lmsFactory.getAll(
-			lmsConstants.LIBRARIAN_SERVER_URL + lmsConstants.GET_SINGLE_BRANCH + id)
+			lmsConstants.LIBRARIAN_SERVER_URL + lmsConstants.GET_SINGLE_BRANCH + branchId)
 			.then(function(data) {
 				$scope.selectedBranch = data;
 				$window.location.href = "#/showbranch";
@@ -22,28 +22,5 @@ lmsApp.controller("librarianController", function($scope, $http, $window,
 	
 	
 	
-	
-	
-	
-	
-	
-	
-//--------------------------------------------------------------------------------------------------------
-//	$scope.search = "";
-//	$scope.selectedIndex = null;
-//	$scope.selectedBranch = null;
-//
-//	$scope.selectPerson = function(branch, index) {
-//		$scope.selectedIndex = index;
-//		$scope.selectedBranch = branch;
-//	};
-//
-//	$scope.sensitiveSearch = function(branch) {
-//		if ($scope.search) {
-//			return branch.branchName.indexOf($scope.search) == 0
-//					|| branch.branchAddress.indexOf($scope.search) == 0;
-//		}
-//		return true;
-//	};
 
 })
